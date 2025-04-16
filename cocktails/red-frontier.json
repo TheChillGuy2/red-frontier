@@ -1,0 +1,31 @@
+{
+  "id": "red-frontier",
+  "name": "Red Frontier",
+  "image": "images/red-frontier.jpg",
+  "description": "A bold, ruby-red whiskey cocktail with cranberry, cola, grenadine and mint. Refreshing and balanced, perfect for summer evenings.",
+  "keywords": ["cocktail", "whiskey", "cranberry", "mint", "signature", "cola", "grenadine", "red drink"],
+  "flavorProfile": "Smooth and slightly sweet with a minty finish and fruity depth. Balanced between classic warmth and modern freshness.",
+  "strength": 6,
+  "ingredients": [
+    "4 cl Whiskey",
+    "6 cl Cranberry Juice",
+    "4 cl Cola",
+    "1 cl Grenadine",
+    "Crushed Ice",
+    "Fresh Mint (for garnish)"
+  ],
+  "instructions": [
+    "Fill a tumbler glass with crushed ice.",
+    "Add whiskey, cranberry juice and cola.",
+    "Slowly pour in grenadine to create a gradient.",
+    "Stir gently.",
+    "Garnish with a sprig of fresh mint."
+  ],
+  "externalLinks": {
+    "pinterest": "https://pin.it/4J5UWaChG",
+    "reddit": "https://www.reddit.com/r/Mixology/comments/1jzzl03/red_frontier_a_modern_whiskeybased_cocktail_with/",
+    "medium": "https://medium.com/@hansmayerrp/red-frontier-9e4c84719f9b"
+  },
+  "tags": ["signature", "summer", "red", "whiskey", "mint"],
+  "variations": ["rusty-river"]
+}
