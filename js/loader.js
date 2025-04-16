@@ -79,7 +79,7 @@ async function loadCocktail() {
     } else if (data.variations && data.variations.length > 0) {
       variationLinks.innerHTML = `<strong>Variations:</strong> ` +
         data.variations.map(v =>
-          `<a href="cocktail.html?drink=${v}">${v.replace('-', ' ')}</a>`
+          `<a href="?drink=${v}">${v.replace('-', ' ')}</a>`
         ).join(', ');
     }
 
