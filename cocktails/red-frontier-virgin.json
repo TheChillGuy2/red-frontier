@@ -1,0 +1,26 @@
+{
+  "id": "red-frontier-virgin",
+  "name": "Red Frontier Virgin",
+  "image": "images/red-frontier.png",
+  "description": "A non-alcoholic twist on the Red Frontier cocktail with cranberry, cola, grenadine, lime and mint.",
+  "keywords": ["virgin cocktail", "mocktail", "non-alcoholic", "cranberry", "cola", "summer"],
+  "flavorProfile": "Fruity, sweet-tart, and refreshing with a citrus twist. Ideal as a mocktail or daytime refreshment.",
+  "strength": 0,
+  "ingredients": [
+    "6 cl Cranberry Juice",
+    "4 cl Cola",
+    "1 cl Grenadine",
+    "1 cl Fresh Lime Juice",
+    "Crushed Ice",
+    "Fresh Mint (garnish)"
+  ],
+  "instructions": [
+    "Fill a glass with crushed ice.",
+    "Add cranberry juice, cola, grenadine, and lime juice.",
+    "Stir gently.",
+    "Garnish with fresh mint."
+  ],
+  "externalLinks": {},
+  "tags": ["mocktail", "virgin", "cranberry", "nonalcoholic", "redfrontier", "summer"],
+  "variationOf": "red-frontier"
+}
