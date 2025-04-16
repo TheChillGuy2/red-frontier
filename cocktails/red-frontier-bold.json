@@ -1,0 +1,25 @@
+{
+  "id": "red-frontier-bold",
+  "name": "Red Frontier Bold",
+  "image": "images/red-frontier.png",
+  "description": "Red Frontier Bold is a stronger variation of the whiskey cocktail with bourbon, triple sec, lemon and grenadine.",
+  "keywords": ["bold cocktail", "strong whiskey drink", "red frontier variation", "triple sec cocktail"],
+  "flavorProfile": "Intense, citrusy, with bold whiskey notes and a balanced sweetness. Perfect for experienced cocktail fans.",
+  "strength": 7,
+  "ingredients": [
+    "5 cl Bourbon or Rye Whiskey",
+    "2 cl Triple Sec (e.g. Cointreau)",
+    "2 cl Fresh Lemon Juice",
+    "1 cl Grenadine",
+    "Crushed Ice",
+    "Lemon Zest (garnish)"
+  ],
+  "instructions": [
+    "Shake all ingredients with ice.",
+    "Strain into a glass filled with crushed ice.",
+    "Garnish with lemon zest."
+  ],
+  "externalLinks": {},
+  "tags": ["cocktail", "strong", "whiskey", "bold", "redfrontier", "summer"],
+  "variationOf": "red-frontier"
+}
