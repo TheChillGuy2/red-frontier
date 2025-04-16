@@ -75,7 +75,7 @@ async function loadCocktail() {
     const variationLinks = document.getElementById('variation-links');
     variationLinks.innerHTML = '';
     if (data.variationOf) {
-      variationLinks.innerHTML = `This is a variation of <a href="cocktail.html?drink=${data.variationOf}">${data.variationOf.replace('-', ' ')}</a>.`;
+      variationLinks.innerHTML = `This is a variation of <a href="?drink=${data.variationOf}">${data.variationOf.replace('-', ' ')}</a>.`;
     } else if (data.variations && data.variations.length > 0) {
       variationLinks.innerHTML = `<strong>Variations:</strong> ` +
         data.variations.map(v =>
