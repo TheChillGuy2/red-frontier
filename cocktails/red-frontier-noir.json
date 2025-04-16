@@ -1,0 +1,28 @@
+{
+  "id": "red-frontier-noir",
+  "name": "Red Frontier Noir",
+  "image": "images/red-frontier-noir.jpg",
+  "description": "An elegant, darker twist on the Red Frontier featuring rye whiskey, black cherry, bitters and cranberry – rich, deep and refined.",
+  "keywords": ["cocktail", "whiskey", "cherry", "cranberry", "bitters", "variation", "signature", "dark"],
+  "flavorProfile": "Smoky, subtly sweet and deep-fruity with mild bitterness and an aromatic cherry finish.",
+  "strength": 7,
+  "ingredients": [
+    "5 cl Rye Whiskey",
+    "4 cl Cranberry Juice",
+    "1 cl Black Cherry Syrup",
+    "2 dashes Aromatic Bitters",
+    "0.5 cl Grenadine",
+    "Crushed Ice",
+    "Black Cherry & Mint (garnish)"
+  ],
+  "instructions": [
+    "Fill a tumbler with crushed ice.",
+    "Add rye whiskey, cranberry juice, black cherry syrup and grenadine.",
+    "Add 2 dashes of bitters.",
+    "Stir gently until chilled.",
+    "Garnish with a black cherry and a mint sprig."
+  ],
+  "externalLinks": {},
+  "tags": ["dark", "whiskey", "signature", "refined", "black cherry"],
+  "variationOf": "red-frontier"
+}
