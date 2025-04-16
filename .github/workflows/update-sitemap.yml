@@ -25,8 +25,6 @@ jobs:
       - name: Generate sitemap.xml
         run: node generate-sitemap.js
 
-      - run: echo "::notice ::Using repo: https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}"
-
       - name: Commit and push sitemap
         run: |
           git config user.name "github-actions"
