@@ -113,5 +113,9 @@ main {
 
   #variation-links a {
     color: #0077cc;
+  }
+
+  h1, h2, h3 {
+    color: #d94a5a;
   } 
 }
