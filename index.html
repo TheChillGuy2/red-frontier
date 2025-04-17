@@ -15,6 +15,18 @@
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/meta.js"></script>
   <script src="js/loader.js" defer></script>
+
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      if (typeof clicky !== 'undefined') {
+        alert('✅ Clicky loaded successfully');
+      } else {
+        alert('❌ Clicky not loaded');
+      }
+    }, 1000);
+  });
+ </script> 
 </head>
 <body>
   <main>
@@ -39,12 +51,5 @@
 
     <div id="tags"></div>
   </main>
-  <script>
-     if (typeof clicky !== 'undefined') {
-        alert('Clicky is loaded!');
-     } else {
-        alert('Clicky not loaded!');
-     }
-  </script>
 </body>
 </html>
