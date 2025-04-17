@@ -111,7 +111,7 @@ main {
     color: #fff;
   }
 
-  #variation-links {
+  #variation-links a {
     color: #0077cc;
   } 
 }
