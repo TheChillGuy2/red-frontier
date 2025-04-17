@@ -14,6 +14,13 @@ async function loadCocktail() {
     if (!response.ok) throw new Error('Cocktail not found.');
     const data = await response.json();
 
+    // Preload image
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preload';
+    preloadLink.as = 'image';
+    preloadLink.href = data.image;
+    document.head.appendChild(preloadLink);
+    
     // Meta & SEO
     setPageTitle(`${data.name} – Signature Cocktail`);
     setMetaTag('description', data.description);
