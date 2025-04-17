@@ -22,8 +22,10 @@ async function loadCocktail() {
     setOpenGraphMeta('og:description', data.description);
     setOpenGraphMeta('og:image', data.image);
 
-    injectJSONLD(drinkData, imageUrl, drinkUrl);
-
+    const imageUrl = data.image || 'https://thechillguy2.github.io/red-frontier/img/default.png';
+    const drinkUrl = window.location.href;
+    injectJSONLD(data, imageUrl, drinkUrl); 
+    
     // Populate content
     document.getElementById('cocktail-name').textContent = data.name;
     document.getElementById('cocktail-image').src = data.image;
