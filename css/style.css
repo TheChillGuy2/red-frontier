@@ -110,4 +110,8 @@ main {
     background: #111;
     color: #fff;
   }
+
+  #variation-links {
+    color: #0077cc;
+  } 
 }
