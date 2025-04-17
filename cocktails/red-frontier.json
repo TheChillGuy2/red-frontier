@@ -1,7 +1,7 @@
 {
   "id": "red-frontier",
   "name": "Red Frontier",
-  "image": "images/red-frontier.jpg",
+  "image": "images/red-frontier.webp",
   "description": "A bold, ruby-red whiskey cocktail with cranberry, cola, grenadine and mint. Refreshing and balanced, perfect for summer evenings.",
   "keywords": ["cocktail", "whiskey", "cranberry", "mint", "signature", "cola", "grenadine", "red drink"],
   "flavorProfile": "Smooth and slightly sweet with a minty finish and fruity depth. Balanced between classic warmth and modern freshness.",
@@ -27,5 +27,5 @@
     "medium": "https://medium.com/@hansmayerrp/red-frontier-9e4c84719f9b"
   },
   "tags": ["signature", "summer", "red", "whiskey", "mint"],
-  "variations": ["red-frontier-bold", "red-frontier-virgin", "red-frontier-noir", "arctic-frontier", "chilli-frontier", "tropic-frontier"]
+  "variations": ["red-frontier-bold", "red-frontier-virgin", "red-frontier-noir", "arctic-frontier", "spicy-frontier", "tropic-frontier"]
 }
