@@ -37,7 +37,12 @@ async function loadCocktail() {
 
     // Name & Bild
     document.getElementById('cocktail-name').textContent = data.name;
+    // Bildquellen dynamisch setzen (AVIF, WebP, Fallback)
+    const baseImagePath = data.image.replace(/\.(jpe?g|png|webp|avif)$/i, '');
+    document.getElementById('img-avif').srcset = `${baseImagePath}.avif`;
+    document.getElementById('img-webp').srcset = `${baseImagePath}.webp`;
     document.getElementById('cocktail-image').src = data.image;
+    document.getElementById('cocktail-image').alt = data.name;
     document.getElementById('cocktail-image').alt = data.name;
 
     // Beschreibung & Flavor
