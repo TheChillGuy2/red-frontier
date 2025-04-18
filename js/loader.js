@@ -14,12 +14,15 @@ async function loadCocktail() {
     if (!response.ok) throw new Error('Cocktail not found.');
     const data = await response.json();
 
-    // Preload image
-    const preloadLink = document.createElement('link');
-    preloadLink.rel = 'preload';
-    preloadLink.as = 'image';
-    preloadLink.href = data.image;
-    document.head.appendChild(preloadLink);
+    // Preload AVIF bevorzugt
+    const baseImagePath = data.image.replace(/\.(jpe?g|png|webp|avif)$/i, '');
+
+    const preloadAvif = document.createElement('link');
+    preloadAvif.rel = 'preload';
+    preloadAvif.as = 'image';
+    preloadAvif.href = `${baseImagePath}.avif`;
+    preloadAvif.type = 'image/avif';
+    document.head.appendChild(preloadAvif);
     
     // Meta & SEO
     setPageTitle(`${data.name} – Signature Cocktail`);
