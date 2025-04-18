@@ -23,6 +23,14 @@ async function loadCocktail() {
     preloadAvif.href = `${baseImagePath}.avif`;
     preloadAvif.type = 'image/avif';
     document.head.appendChild(preloadAvif);
+
+    // Preload WebP Fallback
+    const preloadWebp = document.createElement('link');
+    preloadWebp.rel = 'preload';
+    preloadWebp.as = 'image';
+    preloadWebp.href = `${baseImagePath}.webp`;
+    preloadWebp.type = 'image/webp';
+    document.head.appendChild(preloadWebp);
     
     // Meta & SEO
     setPageTitle(`${data.name} – Signature Cocktail`);
