@@ -14,9 +14,10 @@ async function loadCocktail() {
     if (!response.ok) throw new Error('Cocktail not found.');
     const data = await response.json();
 
-    // Preload AVIF bevorzugt
+    // Base Pfad (ohne Endung)
     const baseImagePath = data.image.replace(/\.(jpe?g|png|webp|avif)$/i, '');
 
+    // Preload AVIF
     const preloadAvif = document.createElement('link');
     preloadAvif.rel = 'preload';
     preloadAvif.as = 'image';
@@ -24,14 +25,14 @@ async function loadCocktail() {
     preloadAvif.type = 'image/avif';
     document.head.appendChild(preloadAvif);
 
-    // Preload WebP Fallback
+    // Preload WebP
     const preloadWebp = document.createElement('link');
     preloadWebp.rel = 'preload';
     preloadWebp.as = 'image';
     preloadWebp.href = `${baseImagePath}.webp`;
     preloadWebp.type = 'image/webp';
     document.head.appendChild(preloadWebp);
-    
+
     // Meta & SEO
     setPageTitle(`${data.name} – Signature Cocktail`);
     setMetaTag('description', data.description);
@@ -42,18 +43,15 @@ async function loadCocktail() {
     setOpenGraphMeta('og:url', window.location.href);
 
     // JSON-LD
-    const imageUrl = data.image || 'https://thechillguy2.github.io/red-frontier/img/default.png';
+    const imageUrl = `${baseImagePath}.jpg`; // Fallback
     const drinkUrl = window.location.href;
     injectJSONLD(data, imageUrl, drinkUrl);
 
     // Name & Bild
     document.getElementById('cocktail-name').textContent = data.name;
-    // Bildquellen dynamisch setzen (AVIF, WebP, Fallback)
-    const baseImagePath = data.image.replace(/\.(jpe?g|png|webp|avif)$/i, '');
     document.getElementById('img-avif').srcset = `${baseImagePath}.avif`;
     document.getElementById('img-webp').srcset = `${baseImagePath}.webp`;
-    document.getElementById('cocktail-image').src = data.image;
-    document.getElementById('cocktail-image').alt = data.name;
+    document.getElementById('cocktail-image').src = `${baseImagePath}.jpg`;
     document.getElementById('cocktail-image').alt = data.name;
 
     // Beschreibung & Flavor
@@ -86,7 +84,7 @@ async function loadCocktail() {
       instructionsList.appendChild(li);
     });
 
-    // Links
+    // Externe Links
     const externalLinks = document.getElementById('external-links');
     externalLinks.innerHTML = '';
     for (const [name, url] of Object.entries(data.externalLinks || {})) {
@@ -116,6 +114,12 @@ async function loadCocktail() {
           `<a href="?drink=${v}">${v.replace('-', ' ')}</a>`
         ).join(', ');
     }
+
+    // Check ob Bild geladen werden konnte – wenn nicht, zeige Hinweis
+    const img = document.getElementById('cocktail-image');
+    img.onerror = () => {
+      document.body.innerHTML = `<main><h1>Browser too old</h1><p>Your browser does not support modern image formats. Please use a modern browser like Chrome, Firefox or Edge.</p></main>`;
+    };
 
   } catch (err) {
     document.body.innerHTML = `<main><h1>Error</h1><p>${err.message}</p></main>`;
